@@ -7,6 +7,8 @@
 
    <head>
 
+
+
       <!--- Basic Page Needs
    ================================================== -->
       <meta charset="utf-8">
@@ -20,14 +22,51 @@
 
       <!-- CSS
     ================================================== -->
+      <link rel="stylesheet" href="css/bootstrap4.min.css">
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesheet" href="css/carousel.css">
       <link rel="stylesheet" href="css/default.css">
       <link rel="stylesheet" href="css/layout.css">
       <link rel="stylesheet" href="css/media-queries.css">
       <link rel="stylesheet" href="css/magnific-popup.css">
 
+
+
       <!-- Script
    ================================================== -->
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+      <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+
+      <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+      <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+
+      <script>
+         // Your web app's Firebase configuration
+         // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+         var firebaseConfig = {
+            apiKey: "AIzaSyDaS2HWWfZXJf_L2Xy-9YOEGG_KWc4bcF4",
+            authDomain: "personal-website-a5531.firebaseapp.com",
+            projectId: "personal-website-a5531",
+            storageBucket: "personal-website-a5531.appspot.com",
+            messagingSenderId: "955762493938",
+            appId: "1:955762493938:web:8c143524083aeafa36036b",
+            measurementId: "G-W76HSF9GFQ"
+         };
+         // Initialize Firebase
+         firebase.initializeApp(firebaseConfig);
+         firebase.analytics();
+      </script>
+      <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
+
       <script src="js/modernizr.js"></script>
+      <script defer src="js/jquery.min.js"></script>
+      <script defer src="js/owlCarousel.js"></script>
+      <script defer src="js/app.js"></script>
+      <script defer src="js/carousel.js"></script>
+      <script src="js/modernizr.js"></script>
+
+
 
       <!-- Favicons
 	================================================== -->
@@ -60,7 +99,8 @@
          <div class="row banner">
             <div class="banner-text">
                <h1 class="responsive-headline">I'm Uzair Chhapra.</h1>
-               <h3>I am a Mumbai based computer engineer looking to venture into new ideas,
+               <h3 id='bio'>
+                  I am a Mumbai based computer engineer looking to venture into new ideas,
                   connect with people, learn and impart knowledge, and most importantly, apply them. Let's <a
                      class="smoothscroll" href="#about">
                      start scrolling</a>
@@ -103,7 +143,7 @@
 
                <h2>About Me</h2>
 
-               <p>
+               <p id='aboutMe'>
                   I am a fresher as I have just completed my B.E. in Computer Engineering.
                   Catching up with tech news has been my hobby since I was a kid. I have always had a knack of learning
                   new topics related to my field of study. All my life, I have thrived under pressure as pressure
@@ -163,7 +203,7 @@
                   <div class="twelve columns">
 
                      <h3>Rajiv Gandhi Institute of Technology</h3>
-                     <h6>University of Mumbai</h6>
+                     <h6 class="info">University of Mumbai</h6>
                      <p class="info">B.E. in Computer Engineering <span>&bull;</span> <em class="date">June 2020</em>
                      </p>
 
@@ -417,312 +457,12 @@
       <!-- Portfolio Section
    ================================================== -->
       <section id="portfolio">
-
-         <div class="row">
-
-            <div class="twelve columns collapsed">
-
-               <h1>My projects</h1>
-
-               <!-- portfolio-wrapper -->
-               <div id="portfolio-wrapper" class="bgrid-quarters s-bgrid-thirds cf">
-
-                  <div class="columns portfolio-item">
-                     <div class="item-wrap">
-
-                        <a href="#modal-06" title="Charging Buddy">
-                           <img alt="" src="images/works/chargingbuddy.png">
-                           <div class="overlay">
-                              <div class="portfolio-item-meta">
-                                 <h5>Mobile Charging Station</h5>
-                                 <p>
-                                    Provides users a secure locker based mobile charging station at public places such
-                                    as
-                                    shopping malls.
-                                 </p>
-                              </div>
-                           </div>
-                           <div class="link-icon"><i class="icon-plus"></i></div>
-                        </a>
-
-                     </div>
-                  </div> <!-- item end -->
-
-
-                  <div class="columns portfolio-item">
-                     <div class="item-wrap">
-
-                        <a href="#modal-07" title="Money Me">
-                           <img alt="" src="images/works/moneyme.png">
-                           <div class="overlay">
-                              <div class="portfolio-item-meta">
-                                 <h5>Money Me</h5>
-                                 <p>
-                                    Provides a money management and analysis platform for users to understand their
-                                    money
-                                    spending and saving patterns
-                                    across multiple bank accounts.
-                                 </p>
-                              </div>
-                           </div>
-                           <div class="link-icon"><i class="icon-plus"></i></div>
-                        </a>
-
-                     </div>
-                  </div> <!-- item end -->
-
-                  <div class="columns portfolio-item">
-                     <div class="item-wrap">
-
-                        <a href="#modal-01" title="Home Security">
-                           <img alt="" src="images/works/homesecurity.png">
-                           <div class="overlay">
-                              <div class="portfolio-item-meta">
-                                 <h5>Autonomous Home Security</h5>
-                                 <p>
-                                    A Raspberry Pi device capable of being attached at the door for authnetication of
-                                    home
-                                    users.
-                                 </p>
-                              </div>
-                           </div>
-                           <div class="link-icon"><i class="icon-plus"></i></div>
-                        </a>
-
-                     </div>
-                  </div> <!-- item end -->
-
-                  <div class="columns portfolio-item">
-                     <div class="item-wrap">
-
-                        <a href="#modal-02" title="">
-                           <img alt="" src="images/works/bmb.png">
-                           <div class="overlay">
-                              <div class="portfolio-item-meta">
-                                 <h5>BookMyBicycle</h5>
-                                 <p>
-                                    A website to rent bicycles with secure authentication and database connectivity.
-                                 </p>
-                              </div>
-                           </div>
-                           <div class="link-icon"><i class="icon-plus"></i></div>
-                        </a>
-
-                     </div>
-                  </div> <!-- item end -->
-
-                  <div class="columns portfolio-item">
-                     <div class="item-wrap">
-
-                        <a href="#modal-03" title="">
-                           <img alt="" src="images/works/library.png">
-                           <div class="overlay">
-                              <div class="portfolio-item-meta">
-                                 <h5>Library management</h5>
-                                 <p>
-                                    A python software with all essential features required in a Library.
-                                 </p>
-                              </div>
-                           </div>
-                           <div class="link-icon"><i class="icon-plus"></i></div>
-                        </a>
-
-                     </div>
-                  </div> <!-- item end -->
-
-                  <div class="columns portfolio-item">
-                     <div class="item-wrap">
-
-                        <a href="#modal-04" title="">
-                           <img alt="" src="images/works/box.png">
-                           <div class="overlay">
-                              <div class="portfolio-item-meta">
-                                 <h5>Box In The Bucket</h5>
-                                 <p>It is basic two dimensional game in Java.</p>
-                              </div>
-                           </div>
-                           <div class="link-icon"><i class="icon-plus"></i></div>
-                        </a>
-
-                     </div>
-                  </div> <!-- item end -->
-
-                  <div class="columns portfolio-item">
-                     <div class="item-wrap">
-
-                        <a href="#modal-05" title="">
-                           <img alt="" src="images/works/tlb.png">
-                           <div class="overlay">
-                              <div class="portfolio-item-meta">
-                                 <h5>Translation Lookaside Buffer</h5>
-                                 <p>A simulation software of TLB.</p>
-                              </div>
-                           </div>
-                           <div class="link-icon"><i class="icon-plus"></i></div>
-                        </a>
-
-                     </div>
-                  </div> <!-- item end -->
-
-
-               </div> <!-- portfolio-wrapper end -->
-
-            </div> <!-- twelve columns end -->
-
-
-            <div id="modal-01" class="popup-modal mfp-hide">
-
-               <img class="scale-with-grid" src="images/works/homesecurity.png" alt="" />
-
-               <div class="description-box">
-                  <h4>IOT</h4>
-                  <p>
-                     IOT<br>
-                     A Raspberry Pi device which clicks and performs face recognition of all objects
-                     in a certain range. It emails the picture to the owner and also sends
-                     Android app notifications.
-                  </p>
-                  <span class="categories"><i class="fa fa-tag"></i>IOT, ML</span>
-               </div>
-
-               <div class="link-box">
-                  <a href="" target="_blank">Details</a>
-                  <a class="popup-modal-dismiss">Close</a>
-               </div>
-
-
-               <div id="modal-02" class="popup-modal mfp-hide">
-
-                  <img class="scale-with-grid" src="images/works/bmb.png" alt="" />
-
-                  <div class="description-box">
-                     <h4>Console</h4>
-                     <p>
-                        Web Development<br>
-                        This website was created using the Django Framework. Web languages
-                        used are HTML5, Bootstrap, CSS, Ajax, Javascript, Node.js. MySQL
-                        databse connectivity has been used.
-                     </p>
-                     <span class="categories"><i class="fa fa-tag"></i>Web Development, SQL</span>
-                  </div>
-
-                  <div class="link-box">
-                     <a href="http://bookmybicycle.pythonanywhere.com/" target="_blank">Details</a>
-                     <a class="popup-modal-dismiss">Close</a>
-                  </div>
-
-               </div><!-- modal-02 End -->
-
-               <div id="modal-03" class="popup-modal mfp-hide">
-
-                  <img class="scale-with-grid" src="images/works/library.png" alt="" />
-
-                  <div class="description-box">
-                     <h4>Library Management</h4>
-                     <p>
-                        This software was developed in Python 3 and MySQL with email notification features.
-                     </p>
-                     <span class="categories"><i class="fa fa-tag"></i>Python, MySQL</span>
-                  </div>
-
-                  <div class="link-box">
-                     <a href="https://github.com/uzairchhapra/Library-Management" target="_blank">Details</a>
-                     <a class="popup-modal-dismiss">Close</a>
-                  </div>
-
-               </div><!-- modal-03 End -->
-
-               <div id="modal-04" class="popup-modal mfp-hide">
-
-                  <img class="scale-with-grid" src="images/works/box.png" alt="" />
-
-                  <div class="description-box">
-                     <h4>Box In The Bucket</h4>
-                     <p>
-                        This is a 2D game purely developed in JAVA where the random coloured boxes fall from the
-                        top of the screen and they need to be moved and placed in the right bucket.
-                     </p>
-                     <span class="categories"><i class="fa fa-tag"></i>Java</span>
-                  </div>
-
-                  <div class="link-box">
-                     <a href="https://github.com/uzairchhapra/Box-In-The-Bucket" target="_blank">Details</a>
-                     <a class="popup-modal-dismiss">Close</a>
-                  </div>
-
-               </div><!-- modal-04 End -->
-
-               <div id="modal-05" class="popup-modal mfp-hide">
-
-                  <img class="scale-with-grid" src="images/works/tlb.png" alt="" />
-
-                  <div class="description-box">
-                     <h4>Translation Lookaside Buffer</h4>
-                     <p>
-                        Created a simulation software to show the implementation of TLB using Python 3.
-                     </p>
-                     <span class="categories"><i class="fa fa-tag"></i>Computer Organization and Architecture</span>
-                  </div>
-
-                  <div class="link-box">
-                     <a href="https://github.com/uzairchhapra/TLB" target="_blank">Details</a>
-                     <a class="popup-modal-dismiss">Close</a>
-                  </div>
-
-               </div><!-- modal-05 End -->
-
-               <div id="modal-06" class="popup-modal mfp-hide">
-
-                  <img class="scale-with-grid" src="images/works/chargingbuddy.png" alt="" />
-
-                  <div class="description-box">
-                     <h4>Mobile Charging Station</h4>
-                     <p>
-                        Provides users a secure locker based mobile charging station at public places such as shopping
-                        malls.
-                        Purpose of the project is to increase revenue of the place at which the station is installed.
-                        Will provide personalized product recommendations for users to buy from the place the station is
-                        located at.
-                     </p>
-                     <span class="categories"><i class="fa fa-tag"></i>Cloud Computing, Machine Learning, IOT, Web
-                        Development</span>
-                  </div>
-
-                  <div class="link-box">
-                     <a href="https://chargingwizard.au-syd.mybluemix.net/charge/" target="_blank">Details</a>
-                     <a class="popup-modal-dismiss">Close</a>
-                  </div>
-
-               </div><!-- modal-06 End -->
-
-               <div id="modal-07" class="popup-modal mfp-hide">
-
-                  <img class="scale-with-grid" src="images/works/moneyme.png" alt="" />
-
-                  <div class="description-box">
-                     <h4>Money Me</h4>
-                     <p>
-                        Provides a money management and analysis platform for users to understand their money spending
-                        and
-                        saving patterns
-                        across multiple bank accounts.
-                        Uses Machine Learning to group similar users and provide analysis of their data.
-                     </p>
-                     <span class="categories"><i class="fa fa-tag"></i>Fintech</span>
-                  </div>
-
-                  <div class="link-box">
-                     <a href="https://drive.google.com/file/d/15Wd1sDX6Wx_bPr6-7dqyqACS6bl7hS3K/"
-                        target="_blank">Details</a>
-                     <a class="popup-modal-dismiss">Close</a>
-                  </div>
-
-               </div><!-- modal-07 End -->
-
-
-
-
-            </div> <!-- row End -->
+         <div class="gtco-testimonials">
+            <h2>My Projects</h2>
+            <div id='insertProjects' class="owl-carousel owl-carousel1 owl-theme">
+               <!-- Projects will be inserted here -->
+            </div>
+         </div>
 
       </section> <!-- Portfolio Section End-->
 
@@ -812,6 +552,8 @@
       <script src="js/jquery.fittext.js"></script>
       <script src="js/magnific-popup.js"></script>
       <script src="js/init.js"></script>
+
+
 
    </body>
 

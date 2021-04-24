@@ -315,7 +315,6 @@ ul#nav li.current a { color: #F06000; }
    position: absolute;
    left: 0;
    top: 0;
-
    margin: 0;
    padding-right: 24px;
   	background: #313131;
@@ -328,27 +327,27 @@ ul#nav li.current a { color: #F06000; }
 
 ._100 {
   	width: 100%;
-  	-webkit-animation: _100 2s ease;
+  	animation: _100 2s ease;
 }
 
 ._80 {
   	width: 80%;
-  	-webkit-animation: _80 2s ease;
+  	animation: _80 2s ease;
 }
 
 ._60 {
   	width: 60%;
-  	-webkit-animation: _60 2s ease;
+  	animation: _60 2s ease;
 }
 
 ._40 {
   	width: 40%;
-  	-webkit-animation: _40 2s ease;
+  	animation: _40 2s ease;
 }
 
 .ml {
   	width: 30%;
-  	-moz-animation: ml 2s ease;
+  	animation: ml 2s ease;
   	-webkit-animation: ml 2s ease;
 }
 
@@ -403,22 +402,22 @@ ul#nav li.current a { color: #F06000; }
   100% { width: 50%;  }
 } */
 
-@-webkit-keyframes _100 {
+@keyframes _100 {
   0%   { width: 0px;  }
   100% { width: 100%;  }
 }
 
-@-webkit-keyframes _80 {
+@keyframes _80 {
   0%   { width: 0px;  }
   100% { width: 80%;  }
 }
 
-@-webkit-keyframes _60 {
+@keyframes _60 {
   0%   { width: 0px;  }
   100% { width: 60%;  }
 }
 
-@-webkit-keyframes _40 {
+@keyframes _40 {
   0%   { width: 0px;  }
   100% { width: 40%;  }
 }
@@ -429,7 +428,7 @@ ul#nav li.current a { color: #F06000; }
 /* ------------------------------------------------------------------ */
 
 #portfolio {
-   background: #ebeeee;
+   background: #2B2B2B;;
    padding-top: 90px;
    padding-bottom: 60px;
 }
@@ -738,7 +737,7 @@ call-to-action .button {
 .flexslider .slides > li { position: relative; }
 
 /* Hide the slides before the JS is loaded. Avoids image jumping */
-.flexslider .slides > li { display: none; -webkit-backface-visibility: hidden; }
+.flexslider .slides > li { display: none; backface-visibility: hidden; }
 /* Suggested container for slide animation setups. Can replace this with your own */
 .flex-container { zoom: 1; position: relative; }
 
@@ -764,7 +763,7 @@ call-to-action .button {
    overflow: hidden;
 }
 
-/* Control Nav */
+/* Control nav */
 .flex-control-nav {
     width: 100%;
     position: absolute;
