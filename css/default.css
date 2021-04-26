@@ -726,7 +726,7 @@ properly.
       padding: 0;
 	}
    .column, .columns {
-	   width: auto !important;
+	   width: 100% !important;
 	   float: none;
 	   margin-left: 0;
 	   margin-right: 0;
