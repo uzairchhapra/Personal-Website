@@ -732,6 +732,13 @@ properly.
 	   margin-right: 0;
       padding: 0 30px;
    }
+
+   .profile-pic-mobile{
+      width: 100% !important;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+   }
    .row .row { width: auto; max-width: none; margin: 0 -30px; }
 
    [class*="column"] + [class*="column"]:last-child { float: none; }

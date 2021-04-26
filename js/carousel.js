@@ -28,13 +28,31 @@
 
     (function ($) {
         const displayProjects = async () => {
-            let div;
+            let div, html;
             let projects = await fetchList('projects');
             // console.table(projects);
             let projectsParent = document.querySelector('#insertProjects');
             projects.forEach(project => {
                 div = document.createElement('div');
-                div.innerHTML = `<div>
+                if (project.link) {
+                    div.innerHTML = `<div>
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5>${project.name}</h5>
+                            <span class="categories"><i class="fa fa-tag"> </i>${project.category}</span>
+                            <p class="card-text">${project.desc}
+                            </p>
+        
+                            <div class="link-box">
+                                <a href="${project.details}" target="_blank">Details</a>
+                                <a href="${project.link}" target="_blank">Link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
+                }
+                else {
+                    div.innerHTML = `<div>
                     <div class="card text-center">
                         <div class="card-body">
                             <h5>${project.name}</h5>
@@ -48,6 +66,8 @@
                         </div>
                     </div>
                 </div>`;
+                }
+
                 projectsParent.appendChild(div);
             });
             carousels();

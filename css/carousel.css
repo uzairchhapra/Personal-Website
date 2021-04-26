@@ -129,20 +129,17 @@
     text-decoration: none;
 }
 
+.link-box a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
 .link-box a {
     color: #fff;
     font: 11px/21px 'opensans-bold', sans-serif;
     text-transform: uppercase;
     letter-spacing: 3px;
     cursor: pointer;
-}
-
-.link-box a:first-child{
-    text-align: left;
-}
-
-.link-box a:last-child{
-    text-align: right;
 }
 
 .gtco-testimonials h2{
